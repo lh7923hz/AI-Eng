@@ -6,7 +6,7 @@ An AI-powered web application that generates inspiring motivational quotes based
 
 - **AI-Powered Quotes**: Generates unique motivational quotes using OpenAI's GPT-3.5-turbo
 - **Theme-Based**: Enter any theme (success, courage, dreams, etc.) to get relevant quotes
-- **Beautiful UI**: Modern, responsive design with smooth animations
+- **Beautiful UI**: Modern, responsive design with smooth pastel colors
 - **Quick Themes**: Pre-selected theme chips for instant inspiration
 - **Error Handling**: Graceful error messages and loading states
 
@@ -169,4 +169,3 @@ Feel free to fork this project and make your own improvements!
 ---
 
 Made with ❤️ and OpenAI
-
