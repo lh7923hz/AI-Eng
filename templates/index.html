@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motivational Quote Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>✨ Motivational Quote Generator</h1>
+            <p class="subtitle">Get inspired with AI-powered motivational quotes</p>
+        </div>
+        
+        <div class="input-section">
+            <div class="input-wrapper">
+                <input 
+                    type="text" 
+                    id="themeInput" 
+                    placeholder="Enter a theme (e.g., success, perseverance, courage...)"
+                    maxlength="100"
+                />
+                <button id="generateBtn" onclick="generateQuote()">
+                    <span class="button-text">Generate Quote</span>
+                    <span class="button-icon">→</span>
+                </button>
+            </div>
+        </div>
+        
+        <div id="loadingSpinner" class="loading-spinner hidden">
+            <div class="spinner"></div>
+            <p>Generating your motivational quote...</p>
+        </div>
+        
+        <div id="quoteDisplay" class="quote-display hidden">
+            <div class="quote-card">
+                <div class="quote-icon">"</div>
+                <p id="quoteText" class="quote-text"></p>
+                <div class="quote-theme">
+                    <span class="theme-label">Theme:</span>
+                    <span id="quoteTheme" class="theme-value"></span>
+                </div>
+            </div>
+        </div>
+        
+        <div id="errorDisplay" class="error-display hidden">
+            <div class="error-card">
+                <span class="error-icon">⚠️</span>
+                <p id="errorText" class="error-text"></p>
+            </div>
+        </div>
+        
+        <div class="example-themes">
+            <p class="example-label">Try these themes:</p>
+            <div class="theme-chips">
+                <span class="theme-chip" onclick="setTheme('success')">Success</span>
+                <span class="theme-chip" onclick="setTheme('perseverance')">Perseverance</span>
+                <span class="theme-chip" onclick="setTheme('courage')">Courage</span>
+                <span class="theme-chip" onclick="setTheme('dreams')">Dreams</span>
+                <span class="theme-chip" onclick="setTheme('growth')">Growth</span>
+                <span class="theme-chip" onclick="setTheme('happiness')">Happiness</span>
+                <span class="theme-chip" onclick="setTheme('memes')">Memes</span>
+            </div>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+
